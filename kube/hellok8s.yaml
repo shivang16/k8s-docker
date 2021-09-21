@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-k8s
+  name: hellok8s
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-k8s
+      app: hellok8s
   template:
     metadata:
       labels:
-        app: hello-k8s
+        app: hellok8s
     spec:
       containers:
-        - name: hello-k8s
-          image: shivang16/hello-k8s:1.0.0
+        - name: hellok8s
+          image: <your username>/hellok8s:1.0.0
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
